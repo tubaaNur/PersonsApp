@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2to-X8-Apb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Peoples-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomePage" customModule="PersonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afh-E3-xfs">
+                                <rect key="frame" x="173" y="430.5" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Detail"/>
+                                <connections>
+                                    <action selector="buttonDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpe-vK-GgY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Afh-E3-xfs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNB-w5-fHk"/>
+                            <constraint firstItem="Afh-E3-xfs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ymS-5u-WAs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Peoples" id="XY2-RZ-vlD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bFE-sU-Tkr">
+                            <connections>
+                                <segue destination="uSG-Nq-nZp" kind="show" id="auv-CW-3Sz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="COo-sw-w5E" kind="show" identifier="toDetail" id="Md6-bu-kdg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26.086956521739133" y="-33.482142857142854"/>
+        </scene>
+        <!--Person Registration-->
+        <scene sceneID="zH0-w9-aFL">
+            <objects>
+                <viewController id="uSG-Nq-nZp" customClass="PersonRegistration" customModule="PersonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qea-AL-LxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nby-eP-BpC">
+                                <rect key="frame" x="50" y="194" width="314" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Tel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-Gf-SxL">
+                                <rect key="frame" x="50" y="289.5" width="314" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-dJ-Ant">
+                                <rect key="frame" x="156" y="385" width="102" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SAVE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonSave:" destination="uSG-Nq-nZp" eventType="touchUpInside" id="3nr-Yg-5tr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Miz-S2-BsT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dzb-Gf-SxL" firstAttribute="top" secondItem="Nby-eP-BpC" secondAttribute="bottom" constant="50" id="Beq-dI-pIB"/>
+                            <constraint firstItem="Miz-S2-BsT" firstAttribute="trailing" secondItem="Nby-eP-BpC" secondAttribute="trailing" constant="50" id="SUk-nK-1TH"/>
+                            <constraint firstItem="Nby-eP-BpC" firstAttribute="leading" secondItem="Miz-S2-BsT" secondAttribute="leading" constant="50" id="Uuo-z9-TT0"/>
+                            <constraint firstItem="Miz-S2-BsT" firstAttribute="trailing" secondItem="dzb-Gf-SxL" secondAttribute="trailing" constant="50" id="cVj-AN-5Hr"/>
+                            <constraint firstItem="Va6-dJ-Ant" firstAttribute="top" secondItem="dzb-Gf-SxL" secondAttribute="bottom" constant="50" id="fhc-je-uzj"/>
+                            <constraint firstItem="Va6-dJ-Ant" firstAttribute="centerX" secondItem="qea-AL-LxJ" secondAttribute="centerX" id="h7Y-Ux-u5F"/>
+                            <constraint firstItem="Nby-eP-BpC" firstAttribute="top" secondItem="Miz-S2-BsT" secondAttribute="top" constant="50" id="ka6-KS-9Ki"/>
+                            <constraint firstItem="dzb-Gf-SxL" firstAttribute="leading" secondItem="Miz-S2-BsT" secondAttribute="leading" constant="50" id="zCS-sq-1B3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Registration" id="wR3-cK-E8l"/>
+                    <connections>
+                        <outlet property="tfPersonName" destination="Nby-eP-BpC" id="GQ4-mc-7HK"/>
+                        <outlet property="tfPersonTel" destination="dzb-Gf-SxL" id="tDY-QE-dWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4l-4f-7yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-460"/>
+        </scene>
+        <!--Person Detail-->
+        <scene sceneID="lpX-kX-zv9">
+            <objects>
+                <viewController id="COo-sw-w5E" customClass="PersonDetail" customModule="PersonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yNK-Gq-X4w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2S-js-spG">
+                                <rect key="frame" x="50" y="194" width="314" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Person Tel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOH-hz-LMO">
+                                <rect key="frame" x="50" y="289.5" width="314" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-HI-vwb">
+                                <rect key="frame" x="135.5" y="385" width="143.5" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPDATE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonUpdate:" destination="COo-sw-w5E" eventType="touchUpInside" id="F7q-pK-zlj"/>
+                                    <action selector="save:" destination="uSG-Nq-nZp" eventType="touchUpInside" id="88U-d1-ERX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2oA-o0-pM5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BOH-hz-LMO" firstAttribute="top" secondItem="E2S-js-spG" secondAttribute="bottom" constant="50" id="DSM-Cs-dGU"/>
+                            <constraint firstItem="wyx-HI-vwb" firstAttribute="centerX" secondItem="yNK-Gq-X4w" secondAttribute="centerX" id="Q7a-fC-V0d"/>
+                            <constraint firstItem="2oA-o0-pM5" firstAttribute="trailing" secondItem="E2S-js-spG" secondAttribute="trailing" constant="50" id="Rqx-4i-cFR"/>
+                            <constraint firstItem="2oA-o0-pM5" firstAttribute="trailing" secondItem="BOH-hz-LMO" secondAttribute="trailing" constant="50" id="d5c-i1-fgi"/>
+                            <constraint firstItem="BOH-hz-LMO" firstAttribute="leading" secondItem="2oA-o0-pM5" secondAttribute="leading" constant="50" id="gLx-16-n9E"/>
+                            <constraint firstItem="wyx-HI-vwb" firstAttribute="top" secondItem="BOH-hz-LMO" secondAttribute="bottom" constant="50" id="nnj-wP-Imm"/>
+                            <constraint firstItem="BOH-hz-LMO" firstAttribute="top" secondItem="E2S-js-spG" secondAttribute="bottom" constant="50" id="pGF-2K-TdF"/>
+                            <constraint firstItem="E2S-js-spG" firstAttribute="top" secondItem="2oA-o0-pM5" secondAttribute="top" constant="50" id="rSZ-ak-uQr"/>
+                            <constraint firstItem="E2S-js-spG" firstAttribute="leading" secondItem="2oA-o0-pM5" secondAttribute="leading" constant="50" id="zM0-vn-a5y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Detail" id="x1p-xT-JsI"/>
+                    <connections>
+                        <outlet property="tfPersonName" destination="E2S-js-spG" id="yfh-yD-eoi"/>
+                        <outlet property="tfPersonTel" destination="BOH-hz-LMO" id="Lto-mT-Ijf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBt-8d-4rZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wWE-Er-lG7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2to-X8-Apb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fNL-T7-FGe">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DFl-GJ-mZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPt-cf-aFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-884.05797101449286" y="-33.482142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
