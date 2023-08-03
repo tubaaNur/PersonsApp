@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293C73C72A7C101B0028B2BB /* PersonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C73C62A7C101B0028B2BB /* PersonsCell.swift */; };
 		296DC2B12A78158D009BBF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2B02A78158D009BBF4E /* AppDelegate.swift */; };
 		296DC2B32A78158D009BBF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2B22A78158D009BBF4E /* SceneDelegate.swift */; };
 		296DC2B52A78158D009BBF4E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2B42A78158D009BBF4E /* HomePage.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293C73C62A7C101B0028B2BB /* PersonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCell.swift; sourceTree = "<group>"; };
 		296DC2AD2A78158D009BBF4E /* PersonsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296DC2B02A78158D009BBF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		296DC2B22A78158D009BBF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293C73C52A7C0FD30028B2BB /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				293C73C62A7C101B0028B2BB /* PersonsCell.swift */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
 		296DC2A42A78158D009BBF4E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		296DC2C52A78160F009BBF4E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				293C73C52A7C0FD30028B2BB /* tableView */,
 				296DC2C62A781637009BBF4E /* views */,
 			);
 			path = ui;
@@ -185,6 +196,7 @@
 				296DC2CB2A781B28009BBF4E /* PersonDetail.swift in Sources */,
 				296DC2B32A78158D009BBF4E /* SceneDelegate.swift in Sources */,
 				296DC2CE2A78304E009BBF4E /* Kisiler.swift in Sources */,
+				293C73C72A7C101B0028B2BB /* PersonsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
