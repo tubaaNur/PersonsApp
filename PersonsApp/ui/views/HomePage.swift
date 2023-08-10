@@ -13,6 +13,8 @@ class HomePage: UIViewController{
     @IBOutlet weak var personTableView: UITableView!
     
     var personList = [Kisiler]()
+    
+    var viewModel = HomePageViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,13 +22,14 @@ class HomePage: UIViewController{
         personTableView.delegate = self
         personTableView.dataSource = self
         
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Tuba", kisi_tel: "11111")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Ebru", kisi_tel: "1231111")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Özge", kisi_tel: "11114536431")
-        
-        personList.append(k1)
-        personList.append(k2)
-        personList.append(k3)
+        _ = viewModel.kisilerListesi.subscribe(onNext: { liste in
+            self.personList = liste
+            self.personTableView.reloadData()
+        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.kisileriYukle()
     }
 
 
@@ -46,7 +49,7 @@ class HomePage: UIViewController{
 
 extension HomePage : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Kişi ara: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -86,7 +89,7 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource{
             alert.addAction(cancelAction)
             
             let okAction = UIAlertAction(title: "Okay", style: .destructive){
-                action in print("Kişi sil : \(person.kisi_id!)")
+                action in self.viewModel.sil(kisi_id: person.kisi_id!)
             }
             alert.addAction(okAction)
             self.present(alert, animated: true)

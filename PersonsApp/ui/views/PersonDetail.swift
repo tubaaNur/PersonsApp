@@ -13,6 +13,7 @@ class PersonDetail: UIViewController {
     @IBOutlet weak var tfPersonName: UITextField!
     
     var kisi:Kisiler?
+    var viewModel = PersonDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +26,14 @@ class PersonDetail: UIViewController {
        
     }
     
+    
 
     @IBAction func buttonUpdate(_ sender: Any) {
         if let ka = tfPersonName.text, let kt = tfPersonTel.text, let k = kisi{
-            güncelle(kisi_id: k.kisi_id!, kisi_ad: ka, kisi_tel: kt)
+            viewModel.güncelle(kisi_id: k.kisi_id!, kisi_ad: ka, kisi_tel: kt)
         }
     }
     
-    func güncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String){
-        print("Kişi Güncelle: \(kisi_id)- \(kisi_ad)- \(kisi_tel)")
-        
-        
-    }
+   
     
 }

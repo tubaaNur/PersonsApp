@@ -11,6 +11,8 @@ class PersonRegistration: UIViewController {
 
     @IBOutlet weak var tfPersonTel: UITextField!
     @IBOutlet weak var tfPersonName: UITextField!
+    
+    var viewModel = PersonKayıtDetailViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,13 +22,11 @@ class PersonRegistration: UIViewController {
    
     @IBAction func buttonSave(_ sender: Any) {
         if let ka = tfPersonName.text, let kt = tfPersonTel.text{
-            kaydet(kisi_ad: ka, kisi_tel: kt)
+            viewModel.kaydet(kisi_ad: ka, kisi_tel: kt)
         }
     }
     
     
-    func kaydet(kisi_ad:String, kisi_tel:String) {
-        print("Kişi Kaydet : \(kisi_ad) - \(kisi_tel)")
-    }
+    
 
 }

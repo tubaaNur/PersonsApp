@@ -17,6 +17,11 @@
 		296DC2C92A781B17009BBF4E /* PersonRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2C82A781B17009BBF4E /* PersonRegistration.swift */; };
 		296DC2CB2A781B28009BBF4E /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2CA2A781B28009BBF4E /* PersonDetail.swift */; };
 		296DC2CE2A78304E009BBF4E /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2CD2A78304E009BBF4E /* Kisiler.swift */; };
+		29B38B3F2A8542D3005CD156 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29B38B3E2A8542D3005CD156 /* RxSwift */; };
+		29B38B422A8543AA005CD156 /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B412A8543AA005CD156 /* KisilerDaoRepository.swift */; };
+		29B38B452A854407005CD156 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B442A854407005CD156 /* HomePageViewModel.swift */; };
+		29B38B472A85442E005CD156 /* PersonKayıtDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B462A85442E005CD156 /* PersonKayıtDetailViewModel.swift */; };
+		29B38B492A85445C005CD156 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B482A85445C005CD156 /* PersonDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,10 @@
 		296DC2C82A781B17009BBF4E /* PersonRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistration.swift; sourceTree = "<group>"; };
 		296DC2CA2A781B28009BBF4E /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		296DC2CD2A78304E009BBF4E /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		29B38B412A8543AA005CD156 /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
+		29B38B442A854407005CD156 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		29B38B462A85442E005CD156 /* PersonKayıtDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonKayıtDetailViewModel.swift"; sourceTree = "<group>"; };
+		29B38B482A85445C005CD156 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B38B3F2A8542D3005CD156 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +97,7 @@
 		296DC2C42A7815F6009BBF4E /* data */ = {
 			isa = PBXGroup;
 			children = (
+				29B38B402A854382005CD156 /* Repository */,
 				296DC2C72A781647009BBF4E /* entity */,
 			);
 			path = data;
@@ -95,6 +106,7 @@
 		296DC2C52A78160F009BBF4E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				29B38B432A8543E1005CD156 /* viewModel */,
 				293C73C52A7C0FD30028B2BB /* tableView */,
 				296DC2C62A781637009BBF4E /* views */,
 			);
@@ -119,6 +131,24 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		29B38B402A854382005CD156 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				29B38B412A8543AA005CD156 /* KisilerDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		29B38B432A8543E1005CD156 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29B38B442A854407005CD156 /* HomePageViewModel.swift */,
+				29B38B462A85442E005CD156 /* PersonKayıtDetailViewModel.swift */,
+				29B38B482A85445C005CD156 /* PersonDetailViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +165,9 @@
 			dependencies = (
 			);
 			name = PersonsApp;
+			packageProductDependencies = (
+				29B38B3E2A8542D3005CD156 /* RxSwift */,
+			);
 			productName = PersonsApp;
 			productReference = 296DC2AD2A78158D009BBF4E /* PersonsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 296DC2A42A78158D009BBF4E;
+			packageReferences = (
+				29B38B3D2A8542D3005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 296DC2AE2A78158D009BBF4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,10 +228,14 @@
 			files = (
 				296DC2B52A78158D009BBF4E /* HomePage.swift in Sources */,
 				296DC2C92A781B17009BBF4E /* PersonRegistration.swift in Sources */,
+				29B38B452A854407005CD156 /* HomePageViewModel.swift in Sources */,
 				296DC2B12A78158D009BBF4E /* AppDelegate.swift in Sources */,
 				296DC2CB2A781B28009BBF4E /* PersonDetail.swift in Sources */,
+				29B38B492A85445C005CD156 /* PersonDetailViewModel.swift in Sources */,
+				29B38B422A8543AA005CD156 /* KisilerDaoRepository.swift in Sources */,
 				296DC2B32A78158D009BBF4E /* SceneDelegate.swift in Sources */,
 				296DC2CE2A78304E009BBF4E /* Kisiler.swift in Sources */,
+				29B38B472A85442E005CD156 /* PersonKayıtDetailViewModel.swift in Sources */,
 				293C73C72A7C101B0028B2BB /* PersonsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29B38B3D2A8542D3005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29B38B3E2A8542D3005CD156 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29B38B3D2A8542D3005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296DC2A52A78158D009BBF4E /* Project object */;
 }
